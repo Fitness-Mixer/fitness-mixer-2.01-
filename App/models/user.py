@@ -28,3 +28,17 @@ class User(db.Model, UserMixin):
         """Check hashed password."""
         return check_password_hash(self.password, password)
 
+    def editUsername(self):
+
+    def editPassword(self):
+        
+    def editEmail(self):
+
+    def addExercise(self):
+    
+    def completeExercise(self):
+    
+    def signUp(self):
+    
+    def login(self):
+    
