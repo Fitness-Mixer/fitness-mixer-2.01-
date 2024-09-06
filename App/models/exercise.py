@@ -1,4 +1,4 @@
-from App.database import db
+from App import db
 
 class Exercise(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
@@ -6,5 +6,5 @@ class Exercise(db.Model, UserMixin):
     category = db.Column(db.String(120),nullable=False)
     difficulty = db.Column(db.String(120),nullable=False)
     Equipment = db.Column(db.String(120),nullable=False)
+    muscles = db.relationship('Muscle', secondary='exercise_muscle', back_populates='exercises')
 
-    
