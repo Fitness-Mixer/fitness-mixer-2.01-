@@ -17,7 +17,7 @@ class User(db.Model, UserMixin):
         return{
             'id': self.id,
             'username': self.username,
-            'email':email.self
+            'email':self.email
         }
 
     def set_password(self, password):
@@ -28,17 +28,23 @@ class User(db.Model, UserMixin):
         """Check hashed password."""
         return check_password_hash(self.password, password)
 
-    def editUsername(self):
+    def editUsername(self,username):
+        self.username=username
 
-    def editPassword(self):
+    def editPassword(self,password):
+        self.password=password
         
-    def editEmail(self):
+    def editEmail(self,email):
+        self.email=email
 
     def addExercise(self):
     
     def completeExercise(self):
     
-    def signUp(self):
+    def signUp(self,username,email,password):
     
-    def login(self):
-    
+    def login(self,email,password):
+
+        if check_password(password):
+            return true
+        return false
