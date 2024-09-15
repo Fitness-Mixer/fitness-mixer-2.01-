@@ -17,11 +17,7 @@ class User(db.Model, UserMixin):
         return{
             'id': self.id,
             'username': self.username,
-<<<<<<< HEAD
-            'email':self.email
-=======
             'email': self.email
->>>>>>> 91bfd94 (flask run works now edited __init__.py)
         }
 
     def set_password(self, password):
